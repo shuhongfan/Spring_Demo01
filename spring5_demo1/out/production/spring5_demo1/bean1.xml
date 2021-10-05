@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--        添加p命名空间注入，可以讲话基于xml配置的方式-->
+
+<!--    1 配置User对象创建-->
+<!--    id 唯一标识  class属性 类全路径  默认执行无参数构造方法-->
+    <bean id="user" class="com.shf.bean.User"></bean>
+
+<!--    2 set方法注入属性-->
+    <bean id="book" class="com.shf.bean.Book">
+<!--        property完成属性注入-->
+<!--        name 类里面属性名称  value  向属性注入的值-->
+<!--        <property name="bname" value="三字经"></property>-->
+        <property name="bauthor" value="是否"></property>
+
+<!--        设置null值-->
+<!--        <property name="bname">-->
+<!--            <null></null>-->
+<!--        </property>-->
+
+<!--        属性包含特殊符号-->
+        <property name="bname">
+            <value><![CDATA[<<南京>>]]></value>
+        </property>
+
+    </bean>
+
+<!--    3.有参数构造注入属性-->
+    <bean id="order" class="com.shf.bean.Orders">
+        <constructor-arg name="oname" value="DELL"></constructor-arg>
+        <constructor-arg name="address" value="BJ"></constructor-arg>
+<!--        <constructor-arg index="0" value="LENOVO"></constructor-arg>-->
+<!--        <constructor-arg index="1" value="SZ"></constructor-arg>-->
+    </bean>
+
+    <bean id="book1" class="com.shf.bean.Book"
+          p:bname="三字经" p:bauthor="黛沃洛斯"></bean>
+</beans>

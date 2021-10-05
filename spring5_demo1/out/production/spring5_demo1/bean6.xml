@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd">
+<!--    引入命名空间util-->
+
+<!--    1. 提取list集合类型属性注入-->
+    <util:list id="bookList">
+        <value>西游记</value>
+        <value>三国演义</value>
+        <value>水浒传</value>
+    </util:list>
+
+<!--    2. 提取list集合类型属性注入使用-->
+<!--    scope 设置单实例还是多实例-->
+<!--    singleton 单实例对象  默认值  加载sping配置文件的时候就会创建对象-->
+<!--    prototype  多实例对象  在加载getbean方法的时候创建-->
+    <bean id="book" class="com.shf.bean.Book2" scope="prototype">
+        <property name="list" ref="bookList"/>
+    </bean>
+</beans>

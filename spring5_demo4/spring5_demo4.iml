@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="FacetManager">
-    <facet type="Spring" name="Spring">
-      <configuration>
-        <fileset id="fileset" name="Spring 应用程序上下文" removed="false">
-          <file>file://$MODULE_DIR$/src/bean1.xml</file>
-          <file>file://$MODULE_DIR$/src/bean1.xml</file>
-        </fileset>
-      </configuration>
-    </facet>
-  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
@@ -17,7 +7,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="lib1" level="project" />
     <orderEntry type="library" name="lib3" level="project" />
-    <orderEntry type="library" name="spring-jdbc-5.2.6.RELEASE" level="project" />
+    <orderEntry type="library" name="lib4" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="lib2" level="project" />
   </component>
 </module>

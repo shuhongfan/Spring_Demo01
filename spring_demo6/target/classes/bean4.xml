@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    注入属性 级联赋值-->
+<!--    <bean id="emp" class="com.shf.bean.Emp">-->
+<!--&lt;!&ndash;        设置两个普通属性&ndash;&gt;-->
+<!--        <property name="ename" value="lucy"/>-->
+<!--        <property name="gender" value="女"/>-->
+<!--        <property name="dept" ref="dept"/>-->
+<!--    </bean>-->
+<!--    <bean id="dept" class="com.shf.bean.Dept">-->
+<!--        <property name="dname" value="财务部"/>-->
+<!--    </bean>-->
+
+    <!--    注入属性 级联赋值-->
+    <bean id="emp" class="com.shf.bean.Emp">
+<!--        设置两个普通属性-->
+        <property name="ename" value="lucy"/>
+        <property name="gender" value="女"/>
+<!--        级联赋值-->
+        <property name="dept" ref="dept"/>
+        <property name="dept.dname" value="技术部"/>
+    </bean>
+    <bean id="dept" class="com.shf.bean.Dept"></bean>
+</beans>

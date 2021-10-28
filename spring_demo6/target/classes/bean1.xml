@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xml约束-->
+<!--p命名空间注入 xmlns:p="http://www.springframework.org/schema/p"-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    基于XML方式创建对象  默认执行无参数的构造方法创建对象-->
+<!--    配置User对象创建-->
+<!--    id属性  唯一标识-->
+<!--    class属性  类全路径-->
+<!--    name属性  唯一标识 可以加特殊符号-->
+    <bean id="user" class="com.shf.spring5.User"/>
+
+<!--    set方法注入属性-->
+    <bean id="book" class="com.shf.spring5.Book">
+<!--        使用property完成属性注入-->
+<!--        name属性  类里面属性名称-->
+<!--        value属性 向属性注入值-->
+        <property name="bName" value="三国演义"/>
+        <property name="bAuthor" value="三字经"/>
+
+<!--        null值-->
+<!--        <property name="addressAd">-->
+<!--            <null/>-->
+<!--        </property>-->
+
+<!--        属性值包含特殊符号-->
+        <property name="addressAd">
+            <value><![CDATA[《《南京》》》]]></value>
+        </property>
+    </bean>
+
+<!--    用有参构造注入属性  通过有参构造 注入属性-->
+    <bean id="orders" class="com.shf.spring5.Orders">
+        <!--        使用property完成属性注入-->
+        <!--        name属性  类里面属性名称-->
+        <!--        index属性  类里面属性顺序-->
+        <!--        value属性 向属性注入值-->
+<!--        <constructor-arg name="oname" value="MP4"/>-->
+        <constructor-arg index="0" value="MP4"/>
+        <constructor-arg name="address" value="China"/>
+    </bean>
+
+<!--    p命名空间 set属性注入-->
+    <bean id="book1" class="com.shf.spring5.Book" p:bName="三字经" p:bAuthor="佚名"/>
+</beans>

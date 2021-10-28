@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="schema">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/spring5_demo1/.idea/dataSources/d91d8b7a-128d-42ad-af08-9921f64a68d9/storage_v2/_src_/schema/test.kkQ2AA.zip!/" />
+      <root url="jar://$PROJECT_DIR$/spring5_demo1/.idea/dataSources/d91d8b7a-128d-42ad-af08-9921f64a68d9/storage_v2/_src_/schema/sys.zb4BAA.zip!/" />
+      <root url="jar://$PROJECT_DIR$/spring5_demo1/.idea/dataSources/d91d8b7a-128d-42ad-af08-9921f64a68d9/storage_v2/_src_/schema/girls.V-ncBQ.zip!/" />
+      <root url="jar://$PROJECT_DIR$/spring5_demo1/.idea/dataSources/d91d8b7a-128d-42ad-af08-9921f64a68d9/storage_v2/_src_/schema/myemployees.WYNQeQ.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
